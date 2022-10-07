@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html th:include="template :: modelo">
+
+<body>
+    <div th:fragment="conteudo">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="professor : ${professores}">
+                    <th scope="row" th:text="${professor.id}"></th>
+                    <td th:text="${professor.nome}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+
+</html>
